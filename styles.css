@@ -16,184 +16,187 @@ body {
   background-color: black;
   color: #fff;
 }
-h1,h2,h3 {
-    font-family: syne, sans-serif;
-    font-weight: bold;
+h1,
+h2,
+h3 {
+  font-family: syne, sans-serif;
+  font-weight: bold;
 }
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
-nav, nav * {
-    z-index: 999;
+nav,
+nav * {
+  z-index: 999;
 }
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 3rem;
 }
 nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 1.1rem;
-    position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 1.1rem;
+  position: relative;
 }
 #nav-list {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    transition: clip-path 250ms ease-out;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: clip-path 250ms ease-out;
 }
 #nav-list a::before {
-    content: "";
-    background: #fff;
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    bottom: -2px;
-    transform: scale(0);
-    transition: transform 200ms ease-out;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: -2px;
+  transform: scale(0);
+  transition: transform 200ms ease-out;
 }
-#nav-list a:hover::before{
-    transform: scale(1); 
+#nav-list a:hover::before {
+  transform: scale(1);
 }
 .logo {
-    font-family: syne, sans-serf;
-    font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing: 2px;
+  font-family: syne, sans-serf;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 .hero {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 3rem;
-    background: linear-gradient(to bottom, rgb(0,0,0, 0.2) , #00000066);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3rem;
+  background: linear-gradient(to bottom, rgb(0, 0, 0, 0.2), #00000066);
 }
 .hero-bg {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    opacity: 0.8;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
 }
 .hero p {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
-h1{
-    font-size: 5rem;
-    max-width: 100%;
+h1 {
+  font-size: 5rem;
+  max-width: 100%;
 }
 .hero button {
-    align-self: flex-start;
+  align-self: flex-start;
 }
 button {
-    border-radius: 8px;
-    font-family: urbanist, sans-serif;
-    font-weight: bold; 
-    cursor: pointer;
-    padding: 0.5rem 4rem;
-    font-size: 1rem;
-    position: relative;
-    overflow: hidden;
+  border-radius: 8px;
+  font-family: urbanist, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem 4rem;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
 }
 button.outline {
-    background: none;
-    border: 1px solid #fff;
-    color: white;
+  background: none;
+  border: 1px solid #fff;
+  color: white;
 }
 button:hover.outline span {
-    position: relative;
-    transition: color 250ms ease-out;
+  position: relative;
+  transition: color 250ms ease-out;
 }
 button.outline::before {
-    content:"";
-    position: absolute;
-    inset: 0;
-    background: #fff;
-    transform-origin: left;
-    transform: scaleX(0);
-    transition: transform 250ms ease-out;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 250ms ease-out;
 }
 button:hover.outline {
-    color: black;
+  color: black;
 }
-button:hover.outline::before{
-    transform: scaleX(1);
+button:hover.outline::before {
+  transform: scaleX(1);
 }
 .menu-btn {
-    display: none;
-    width: 2.5rem;
-    height: 1.5rem;
-    position: relative;
-    align-items: center;
-    cursor: pointer;
+  display: none;
+  width: 2.5rem;
+  height: 1.5rem;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
 }
 .burger,
 .burger::after,
 .burger::before {
-    width: 100%;
-    height: 0.2rem;
-    background-color: #fff;
-    border-radius: 2px;
+  width: 100%;
+  height: 0.2rem;
+  background-color: #fff;
+  border-radius: 2px;
 }
 .burger::after,
 .burger::before {
-    content:"";
-    position: absolute;
-    transition: transform 100ms ease-out;
+  content: "";
+  position: absolute;
+  transition: transform 100ms ease-out;
 }
 .burger::after {
-    top: 0;
+  top: 0;
 }
 .burger::before {
-    bottom: 0;
+  bottom: 0;
 }
 .menu-btn.open .burger {
-    background: transparent;
+  background: transparent;
 }
 .menu-btn.open .burger::after {
-    transform: translateY(0.75rem) rotate(45deg);
+  transform: translateY(0.75rem) rotate(45deg);
 }
 .menu-btn.open .burger::before {
-    transform: translateY(-0.55rem) rotate(-45deg);
+  transform: translateY(-0.55rem) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
-    #nav-list {
-        flex-direction: column;
-        position: fixed;
-        inset: 0 0 0 40%;
-        background-color: rgb(0,0,0, 0.2);
-        backdrop-filter: blur(12px);
-        padding-top: 12rem;
-        gap: 5rem;
-        font-size: 1.2rem;
-        clip-path: circle(0% at 100% 0%) 
-    }
-    .menu-btn {
-        display: flex;
-    }
-    .hero button{
-        width: 100%
-    }
-    h1 {
-        font-size: 4rem;
-    }
-    .hero-bg {
-        object-position: 79% 50%;
-    }
+  #nav-list {
+    flex-direction: column;
+    position: fixed;
+    inset: 0 0 0 40%;
+    background-color: rgb(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    padding-top: 12rem;
+    gap: 5rem;
+    font-size: 1.2rem;
+    clip-path: circle(0% at 100% 0%);
+  }
+  .menu-btn {
+    display: flex;
+  }
+  .hero button {
+    width: 100%;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  .hero-bg {
+    object-position: 79% 50%;
+  }
 }
 #nav-list.open {
-    clip-path: circle(200% at 100% 0%);
+  clip-path: circle(200% at 100% 0%);
 }
