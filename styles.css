@@ -15,12 +15,21 @@ body {
   font-family: urbanist, sans-serif;
   background-color: black;
   color: #fff;
+  overflow-x: hidden;
 }
 h1,
 h2,
 h3 {
   font-family: syne, sans-serif;
   font-weight: bold;
+}
+h1 {
+  font-size: 5rem;
+  max-width: 100%;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: 100
 }
 header {
   position: absolute;
@@ -92,10 +101,6 @@ nav a {
 }
 .hero p {
   margin-bottom: 2rem;
-}
-h1 {
-  font-size: 5rem;
-  max-width: 100%;
 }
 .hero button {
   align-self: flex-start;
@@ -199,4 +204,40 @@ button:hover.outline::before {
 }
 #nav-list.open {
   clip-path: circle(200% at 100% 0%);
+}
+.overview {
+  background-color: #fff;
+  color: #000;
+  display: grid;
+  grid-template-rows: 3fr 7fr;
+  place-items: center;
+  height: 100vh;
+  position: relative;
+}
+.container {
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 3rem;
+}
+.track {
+    display: flex;
+    gap: 2vmin;
+    transform: translateX(-50%)
+}
+.track img {
+    width: 40vmin;
+    height: 56vmin;
+    transition: scale 1s ease-out;
+    object-position: 0% 50%;
+    object-fit: cover;
+    user-select: none;
+}
+.wrapper {
+  width: min-content;
+}
+@keyframes para {
+  to {
+    object-position:  100% 50%;
+  }
 }
