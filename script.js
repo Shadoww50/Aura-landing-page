@@ -7,24 +7,41 @@ openMenu.addEventListener("click", () => {
 });
 
 let trackImg = document.querySelectorAll(".track img");
+let cards = document.querySelectorAll(".card");
 let track = document.querySelector(".track");
-let container = document.querySelector(".container");
-let isDown = false;
- let tx;
- let startX;
- let tx0 = -50;
-container.addEventListener("mousemove", (e)=>{
-  if(!isDown) return;
-  let x = e.clientX;
-  let deltaX = startX - x ;
-  tx = -100*deltaX/innerWidth/2;
-  track.style.transform = `translateX(${tx + tx0}%)`; 
-})
-container.addEventListener("mousedown",(e)=>{
-  startX = e.clientX;
-  isDown=true
-})
-container.addEventListener("mouseup", e=>{
-  isDown = false;
-  tx0 +=  tx;
-})
+let leftBtn = document.querySelector(".arrow.left");
+let rightBtn = document.querySelector(".arrow.right");
+
+let p = 0;
+function carousel() {
+  let length = cards.length;
+  rightBtn.addEventListener("click", (e) => {
+    if (p === length - 1) return;
+    p++;
+    slide(p);
+  });
+  leftBtn.addEventListener("click", (e) => {
+    if (p === 0) return;
+    p--;
+    slide(p);
+  });
+}
+function slide(p) {
+  cards[p].style.width = "40vmin";
+  if (cards[p - 1]) cards[p - 1].style.width = "13.4vmin";
+  if (cards[p + 1]) cards[p + 1].style.width = "13.4vmin";
+}
+function reset() {
+  cards.forEach((e) => {
+    e.style.width = "13.4vmin";
+  });
+}
+cards.forEach((e, i) => {
+  e.addEventListener("click", () => {
+    reset();
+    slide(i);
+    p = i
+  });
+});
+carousel();
+slide(0);
