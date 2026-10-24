@@ -18,8 +18,7 @@ body {
   overflow-x: hidden;
 }
 h1,
-h2,
-h3 {
+h2 {
   font-family: syne, sans-serif;
   font-weight: bold;
 }
@@ -28,11 +27,14 @@ h1 {
   max-width: 100%;
 }
 h2 {
-  font-size: 2rem;
-  font-weight: 100;
+  font-size: 4rem;
+  font-weight: 200;
 }
 .secondary {
   color: #777168;
+}
+a {
+  color: inherit;
 }
 header {
   position: absolute;
@@ -214,9 +216,12 @@ button:hover.outline::before {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  height: 100vh;
+  height: 110vh;
   position: relative;
   padding-top: 4rem;
+}
+#overview h2 {
+  font-size: 2rem;
 }
 .intro {
   margin: 1rem;
@@ -268,4 +273,101 @@ button.arrow {
 }
 .arrow.right {
   right: 1rem;
+}
+.collection {
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: hidden;
+}
+.collection .wrapper{
+  width: 50%;
+  height: 100%;
+}
+.wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 0%;
+  animation: slide linear both;
+  animation-timeline: view();
+
+}
+@keyframes slide{
+  to {
+    object-position: 50% 100%;
+  }
+}
+.presentation {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+.presentation * {
+  max-width: 65%;
+}
+.thin {
+  font-weight: 200;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+}
+#collection1 .presentation{
+    background-color: #E7DCC7;
+    color: #25251F;
+}
+#collection2 .presentation{
+    background-color: #34443B;
+    color: #F5F0E7
+}
+#collection2 {
+  flex-direction: row;
+}
+#collection3 {
+  background-color: #C7A779;
+  color: #25221F;
+}
+@media (max-width: 768px){
+    .collection {
+    flex-direction: column-reverse !important;
+  }
+  .presentation, .wrapper {
+    width: 100% !important;
+  }
+  .presentation {
+    padding: 2rem 0;
+  }
+}
+.transition {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.transition  *{
+  max-width: 65%;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 0 3rem;
+}
+footer a {
+  text-decoration: none;
+}
+.copyright {
+  color: grey;
+}
+.social {
+  display: flex;
+  gap: 0.8rem;
+  list-style: none;
 }
